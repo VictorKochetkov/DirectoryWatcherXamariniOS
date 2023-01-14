@@ -105,6 +105,7 @@ function createBuildFoldersForIOS () {
 	if test ! -d build
 	then
 		mkdir build
+		xattr -w com.apple.xcode.CreatedByBuildSystem true build
 	fi
 
 	#check to make sure the folder was created successfully
@@ -158,23 +159,23 @@ function buildForiOS() {
 	printf "...Done\n";
 	cd build/Release-iphonesimulator
 	mv libDirectoryWatcher.a libDirectoryWatcher-x86_64.a
-	mv libDirectoryWatcher-x86_64.a ../../build/Release-ios
+	mv libDirectoryWatcher-x86_64.a ../../build
 	cd ../..
 
 
 	printf " Compiling arm64 version               "
-	xcodeBuild -project DirectoryWatcher.xcodeproj -target DirectoryWatcher -sdk iphoneos -arch arm64 -configuration Release clean build
+	xcodeBuild -project DirectoryWatcher.xcodeproj -target DirectoryWatcher -sdk iphoneos -arch arm64 -configuration Release build
 	printf "...Done\n";
 	cd build/Release-iphoneos
 	mv libDirectoryWatcher.a libDirectoryWatcher-arm64.a
-	mv libDirectoryWatcher-arm64.a ../../build/Release-ios
+	mv libDirectoryWatcher-arm64.a ../../build
 	cd ../..
 
 	printf " Creating Universal Binary             "
-	cd build/Release-ios
+	cd build
 	lipo -create -output libDirectoryWatcher.a libDirectoryWatcher-x86_64.a libDirectoryWatcher-arm64.a
 	printf "...Done\n";
-	cd ../..
+	cd ..
 
 	did_build_ios_successfully=true;
 }

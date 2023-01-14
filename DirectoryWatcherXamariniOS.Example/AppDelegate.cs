@@ -33,6 +33,12 @@ namespace DirectoryWatcherXamariniOS.Example
 
             // Start watching the Documents folder...
             string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            foreach (var file in new DirectoryInfo(documentsFolder).GetFiles())
+            {
+                file.Delete();
+            }
+
             DocumentsDirectoryWatcher = new FileSystemWatcherTouch(documentsFolder);
             DocumentsDirectoryWatcher.Changed += OnDirectoryDidChange;
 

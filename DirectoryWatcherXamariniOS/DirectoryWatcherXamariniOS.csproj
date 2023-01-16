@@ -12,7 +12,7 @@
     <AssemblyName>DirectoryWatcherXamariniOS</AssemblyName>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <PackageId>DirectoryWatcher.iOS</PackageId>
-    <PackageVersion>1.0.5</PackageVersion>
+    <PackageVersion>1.0.7</PackageVersion>
     <Authors>Victor Kochetkov</Authors>
     <Description>Xamarin.iOS wrapper for the Objective-C DirectoryWatcher class.</Description>
     <RepositoryUrl>https://github.com/VictorKochetkov/DirectoryWatcherXamariniOS.git</RepositoryUrl>
@@ -44,6 +44,7 @@
     <Compile Include="DirectoryChangedDelegate.cs" />
     <Compile Include="FileSystemWatcherTouch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libDirectoryWatcher.linkwith.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <ItemGroup>
@@ -56,8 +57,7 @@
   <ItemGroup>
     <NativeReference Include="libDirectoryWatcher.a">
       <Kind>Static</Kind>
-      <SmartLink>True</SmartLink>
-      <ForceLoad>True</ForceLoad>
+      <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
 </Project>

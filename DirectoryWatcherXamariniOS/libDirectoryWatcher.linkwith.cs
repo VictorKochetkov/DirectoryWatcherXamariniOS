@@ -1,4 +1,4 @@
 using System;
 using ObjCRuntime;
 
-[assembly: LinkWith("libDirectoryWatcher.a", LinkTarget.Arm64 | LinkTarget.Simulator64, ForceLoad = true, SmartLink = true)]
+[assembly: LinkWith ("libDirectoryWatcher.a", LinkTarget.Simulator64 | LinkTarget.Arm64, ForceLoad = true, SmartLink=true)]

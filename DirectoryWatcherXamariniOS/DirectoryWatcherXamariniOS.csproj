@@ -12,7 +12,7 @@
     <AssemblyName>DirectoryWatcherXamariniOS</AssemblyName>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <PackageId>DirectoryWatcher.iOS</PackageId>
-    <PackageVersion>1.0.5</PackageVersion>
+    <PackageVersion>1.0.12</PackageVersion>
     <Authors>Victor Kochetkov</Authors>
     <Description>Xamarin.iOS wrapper for the Objective-C DirectoryWatcher class.</Description>
     <RepositoryUrl>https://github.com/VictorKochetkov/DirectoryWatcherXamariniOS.git</RepositoryUrl>
@@ -40,10 +40,10 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
-    <Compile Include="DirectoryChangedDelegate.cs" />
-    <Compile Include="FileSystemWatcherTouch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libDirectoryWatcher.linkwith.cs" />
+    <Compile Include="FileSystemWatcherTouch.cs" />
+    <Compile Include="DirectoryChangedDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <ItemGroup>
@@ -57,7 +57,10 @@
     <NativeReference Include="libDirectoryWatcher.a">
       <Kind>Static</Kind>
       <SmartLink>True</SmartLink>
-      <ForceLoad>True</ForceLoad>
+      <Frameworks>Foundation CoreFoundation</Frameworks>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
 </Project>

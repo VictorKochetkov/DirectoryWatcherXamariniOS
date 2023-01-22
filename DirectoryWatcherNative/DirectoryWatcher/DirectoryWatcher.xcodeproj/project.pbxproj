@@ -7,22 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370098C8188BAA4C00734192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370098C7188BAA4C00734192 /* Foundation.framework */; };
-		370098D7188BAA4C00734192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370098C7188BAA4C00734192 /* Foundation.framework */; };
-		370098D9188BAA4C00734192 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370098D8188BAA4C00734192 /* UIKit.framework */; };
-		370098DC188BAA4C00734192 /* libDirectoryWatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370098C4188BAA4C00734192 /* libDirectoryWatcher.a */; };
 		370098EF188BAA6D00734192 /* DirectoryWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 370098EE188BAA6D00734192 /* DirectoryWatcher.m */; };
+		E54061E22976CECC00F904FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54061E12976CECC00F904FE /* Foundation.framework */; };
+		E54061E42976E2BD00F904FE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54061E32976E2BD00F904FE /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		370098DA188BAA4C00734192 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 370098BC188BAA4C00734192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 370098C3188BAA4C00734192;
-			remoteInfo = DirectoryWatcher;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		370098C2188BAA4C00734192 /* CopyFiles */ = {
@@ -38,12 +26,11 @@
 
 /* Begin PBXFileReference section */
 		370098C4188BAA4C00734192 /* libDirectoryWatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDirectoryWatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		370098C7188BAA4C00734192 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		370098CB188BAA4C00734192 /* DirectoryWatcher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DirectoryWatcher-Prefix.pch"; sourceTree = "<group>"; };
-		370098D4188BAA4C00734192 /* DirectoryWatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryWatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		370098D8188BAA4C00734192 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		370098ED188BAA6D00734192 /* DirectoryWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryWatcher.h; sourceTree = "<group>"; };
 		370098EE188BAA6D00734192 /* DirectoryWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryWatcher.m; sourceTree = "<group>"; };
+		E54061E12976CECC00F904FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E54061E32976E2BD00F904FE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370098C8188BAA4C00734192 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		370098D1188BAA4C00734192 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				370098D9188BAA4C00734192 /* UIKit.framework in Frameworks */,
-				370098DC188BAA4C00734192 /* libDirectoryWatcher.a in Frameworks */,
-				370098D7188BAA4C00734192 /* Foundation.framework in Frameworks */,
+				E54061E42976E2BD00F904FE /* CoreFoundation.framework in Frameworks */,
+				E54061E22976CECC00F904FE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				370098C4188BAA4C00734192 /* libDirectoryWatcher.a */,
-				370098D4188BAA4C00734192 /* DirectoryWatcherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,8 +66,8 @@
 		370098C6188BAA4C00734192 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				370098C7188BAA4C00734192 /* Foundation.framework */,
-				370098D8188BAA4C00734192 /* UIKit.framework */,
+				E54061E32976E2BD00F904FE /* CoreFoundation.framework */,
+				E54061E12976CECC00F904FE /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,24 +110,6 @@
 			productReference = 370098C4188BAA4C00734192 /* libDirectoryWatcher.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		370098D3188BAA4C00734192 /* DirectoryWatcherTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 370098EA188BAA4C00734192 /* Build configuration list for PBXNativeTarget "DirectoryWatcherTests" */;
-			buildPhases = (
-				370098D0188BAA4C00734192 /* Sources */,
-				370098D1188BAA4C00734192 /* Frameworks */,
-				370098D2188BAA4C00734192 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				370098DB188BAA4C00734192 /* PBXTargetDependency */,
-			);
-			name = DirectoryWatcherTests;
-			productName = DirectoryWatcherTests;
-			productReference = 370098D4188BAA4C00734192 /* DirectoryWatcherTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +124,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 370098BB188BAA4C00734192;
@@ -173,20 +133,9 @@
 			projectRoot = "";
 			targets = (
 				370098C3188BAA4C00734192 /* DirectoryWatcher */,
-				370098D3188BAA4C00734192 /* DirectoryWatcherTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		370098D2188BAA4C00734192 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		370098C0188BAA4C00734192 /* Sources */ = {
@@ -197,22 +146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		370098D0188BAA4C00734192 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		370098DB188BAA4C00734192 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 370098C3188BAA4C00734192 /* DirectoryWatcher */;
-			targetProxy = 370098DA188BAA4C00734192 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		370098E5188BAA4C00734192 /* Debug */ = {
@@ -252,7 +186,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "x86_64 arm64";
@@ -289,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "x86_64 arm64";
@@ -322,42 +256,6 @@
 			};
 			name = Release;
 		};
-		370098EB188BAA4C00734192 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DirectoryWatcher/DirectoryWatcher-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DirectoryWatcherTests/DirectoryWatcherTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		370098EC188BAA4C00734192 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DirectoryWatcher/DirectoryWatcher-Prefix.pch";
-				INFOPLIST_FILE = "DirectoryWatcherTests/DirectoryWatcherTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -375,15 +273,6 @@
 			buildConfigurations = (
 				370098E8188BAA4C00734192 /* Debug */,
 				370098E9188BAA4C00734192 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		370098EA188BAA4C00734192 /* Build configuration list for PBXNativeTarget "DirectoryWatcherTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				370098EB188BAA4C00734192 /* Debug */,
-				370098EC188BAA4C00734192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

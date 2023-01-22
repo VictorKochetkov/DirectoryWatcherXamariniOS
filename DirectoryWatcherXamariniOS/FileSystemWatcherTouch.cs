@@ -1,13 +1,4 @@
-//
-// FileSystemWatcherTouch.cs
-// DirectoryWatcherXamariniOS
-//
-// Created by dan (dan@mcneel.com) on 1/18/2014
-// Robert McNeel & Associates.
-//
-using System;
-using System.Diagnostics;
-
+﻿using System;
 namespace DirectoryWatcherXamariniOS
 {
 	public class FileSystemWatcherTouch : IDisposable, IDirectoryWatcher
@@ -145,3 +136,4 @@ namespace DirectoryWatcherXamariniOS
 
 	}
 }
+
